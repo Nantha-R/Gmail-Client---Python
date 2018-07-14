@@ -1,0 +1,35 @@
+{
+  "rules_list":
+  [
+    {
+      "condition": "all",
+      "constraints":
+      [
+        {
+          "field_name":"date",
+          "predicate":"greater than",
+          "value":"1"
+        }
+        ,
+        {
+          "field_name":"subject",
+          "predicate":"contains",
+          "value":"hello"
+        }
+      ],
+      "action":[{"mark":"archive"}]
+    },
+    {
+      "condition": "any",
+      "constraints":
+      [
+        {
+          "field_name": "subject",
+          "predicate": "contains",
+          "value": "Miss"
+        }
+      ],
+      "action":[{"label":"imp"},{"mark":"read"}]
+    }
+  ]
+}
