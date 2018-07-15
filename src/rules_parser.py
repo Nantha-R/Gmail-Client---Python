@@ -1,6 +1,6 @@
 import json
-from utilities import *
-from constants import RulesAttributes
+from src.utilities import *
+from src.constants import RulesAttributes
 
 
 class RulesParser:

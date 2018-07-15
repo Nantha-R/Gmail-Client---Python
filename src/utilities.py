@@ -1,6 +1,7 @@
 import datetime
 from dateutil import relativedelta
 
+
 def contains(value, field):
     """
     Used to check if the value exists in the field.

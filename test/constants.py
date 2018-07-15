@@ -1,6 +1,6 @@
 
 
-FILE_NAME = '../rules.json'
+FILE_NAME = 'src/rules.json'
 
 INITIAL_KEY = 'rules_list'
 

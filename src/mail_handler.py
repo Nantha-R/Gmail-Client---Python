@@ -1,5 +1,5 @@
 from oauth2client import file, client, tools
-from constants import MailAttributes
+from src.constants import MailAttributes
 from httplib2 import Http
 from googleapiclient.discovery import build
 from dateutil.parser import *

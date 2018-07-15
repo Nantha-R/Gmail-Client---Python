@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
-from mail_handler import MailHandler
-from db_handler import DbHandler
-from rules_parser import RulesParser
+from src.mail_handler import MailHandler
+from src.db_handler import DbHandler
+from src.rules_parser import RulesParser
 
 if __name__ == '__main__':
     # Sample command line for the script

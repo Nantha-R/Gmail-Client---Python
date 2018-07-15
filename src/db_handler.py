@@ -1,5 +1,5 @@
 import pymysql
-from constants import DbAttributes
+from src.constants import DbAttributes
 
 
 class DbHandler:
