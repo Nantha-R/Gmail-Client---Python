@@ -7,7 +7,7 @@
       [
         {
           "field_name":"date",
-          "predicate":"greater than",
+          "predicate":"greater than months",
           "value":"1"
         }
         ,

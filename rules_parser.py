@@ -57,8 +57,10 @@ class RulesParser:
         else:
             # The below functions are defined in utilities.py.
             switcher = {
-                "lesser than": lesser_than,
-                "greater than": greater_than
+                "lesser than days": lesser_than_days,
+                "greater than days": greater_than_days,
+                "lesser than months": lesser_than_months,
+                "greater than months": greater_than_months
             }
             return switcher.get(constraint['predicate'])(constraint['value'], mail[field_name])
 

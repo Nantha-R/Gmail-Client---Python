@@ -1,5 +1,5 @@
 import datetime
-
+from dateutil import relativedelta
 
 def contains(value, field):
     """
@@ -21,29 +21,57 @@ def equal_to(value, field):
     return value == field
 
 
-def greater_than(value, field):
+def greater_than_days(value, field):
     """
-    Used to compare dates.
+    Used to compare dates using days.
     :param value: date in constraints.
     :param field: date in mail.
     :return: Boolean value
     """
-    current_time = datetime.datetime.now().date()
-    if (current_time - field).days >= int(value):
+    current_date = datetime.datetime.now().date()
+    if (current_date - field).days >= int(value):
         return True
     else:
         return False
 
 
-def lesser_than(value, field):
+def lesser_than_days(value, field):
     """
-    Used to compare dates.
+    Used to compare dates using days.
     :param value: date in constraints.
     :param field: date in mail.
     :return: Boolean value
     """
-    current_time = datetime.datetime.now().date()
-    if (current_time - field).days <= int(value):
+    current_date = datetime.datetime.now().date()
+    if (current_date - field).days <= int(value):
+        return True
+    else:
+        return False
+
+
+def greater_than_months(value, field):
+    """
+    Used to compare dates using months.
+    :param value: date in constraints.
+    :param field: date in mail.
+    :return: Boolean value
+    """
+    current_date = datetime.datetime.now().date()
+    if relativedelta.relativedelta(current_date, field).months >= int(value):
+        return True
+    else:
+        return False
+
+
+def lesser_than_months(value, field):
+    """
+    Used to compare dates using months.
+    :param value: date in constraints.
+    :param field: date in mail.
+    :return: Boolean value
+    """
+    current_date = datetime.datetime.now().date()
+    if relativedelta.relativedelta(current_date, field).months <= int(value):
         return True
     else:
         return False
