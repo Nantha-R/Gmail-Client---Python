@@ -50,7 +50,7 @@ class RulesParser:
             switcher = {
                 "contains": contains,
                 "does not contains": not contains,
-                "equals": equal_to,
+                "equal": equal_to,
                 "does not equal": not equal_to
             }
             return switcher.get(constraint['predicate'])(constraint['value'], mail[field_name])
